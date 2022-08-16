@@ -16,6 +16,21 @@ class ApartmentsController < ApplicationController
     @apartment.save
   end
 
+  def edit
+    @apartment = Apartment.find(params[:id])
+  end
+
+  def update
+    @apartment = Apartment.find(params[:id])
+    @apartment.update(apartment_params)
+    redirect_to apartment_path(@apartment)
+  end
+
+  def destroy
+    @apartment = Apartment.find(params[:id])
+    @apartment.destroy
+  end
+
   private
 
   def apartment_params
