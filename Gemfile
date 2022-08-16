@@ -41,6 +41,8 @@ group :development do
   gem 'spring'
   # Simple Form
   gem "simple_form", github: "heartcombo/simple_form"
+  #Faker
+  gem "faker"
 end
 
 group :test do
